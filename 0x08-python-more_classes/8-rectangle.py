@@ -94,6 +94,6 @@ class Rectangle:
         return (rect)
 
     def __del__(self):
-        """Prints the number of instances and the message when class is deleted"""
+        """Prints instances and message when class is deleted"""
         type(self).num_of_instances -= 1
         print("Bye rectangle...")
