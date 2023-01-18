@@ -89,3 +89,23 @@ class Rectangle(Base):
         xy = f"{self.x}/{self.y}"
         widhig = f"{self.width}/{self.height}"
         return f"[Rectangle] ({self.id}) {xy} - {widhig}"
+
+    def update(self, *args):
+        """Update the Rectangle."""
+        if args and len(args) != 0:
+            a = 0
+            for arg in args:
+                if a == 0:
+                    if arg is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = arg
+                elif a == 1:
+                    self.width = arg
+                elif a == 2:
+                    self.height = arg
+                elif a == 3:
+                    self.x = arg
+                elif a == 4:
+                    self.y = arg
+                a += 1
