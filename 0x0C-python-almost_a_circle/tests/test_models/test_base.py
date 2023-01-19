@@ -11,6 +11,7 @@ from models.base import Base
 from models.rectangle import Rectangle
 from models.square import Square
 
+
 class TestBase_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the Base class."""
 
@@ -386,6 +387,7 @@ class TestBase_create(unittest.TestCase):
 
         self.assertIsInstance(list_objs_s[2], Square)
         self.assertDictEqual(list_objs_s[2].to_dictionary(), ds3)
+
 
 if __name__ == "__main__":
     unittest.main()
